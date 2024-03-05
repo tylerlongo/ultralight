@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Library</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-family: arial;
+                background-color: rgb(200, 200, 255);
+                z-index: 1;
+            }
+            video {
+                max-height: 100vh;
+            }
+            img {
+                max-height: 200px;
+                z-index: 1;
+            }
+            header {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border: 2px solid black;
+                height: 50px;
+                border-radius: 20px;
+                z-index: 10;
+            }
+            nav {
+                font-size: 2em;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-top: 0.2em;
+                z-index: 10;
+            }
+            nav a {
+                padding: 0.5em;
+                text-decoration: none;
+                z-index: 10;
+            }
+            .current {
+                font-weight: bold;
+            }
+            .title {
+                font-size: 35px;
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+                font-style: italic;
+                font-family: serif;
+            }
+            .group {
+                background-color: rgb(255, 255, 255);
+                border: 2px solid black;
+                border-radius: 20px;
+                padding: 1em;
+                margin-bottom: 0.5em;
+            }
+            .year {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .list {
+                font-size: 16px;
+                font-style: italic;
+                font-family: serif;
+            }
+            .block {
+                display: inline;
+            }
+            .books {
+                margin: 3em;
+                display: flex;
+                justify-content: center;
+            }
+            .books1 {
+                transform: matrix(1.2, 0.2, -0.2, 1.2, 0, 0);
+            }
+            .books2 {
+                transform: matrix(1.2, -0.2, 0.2, 1.2, 0, 0);
+            }
+            #library {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="css_library.html">All</a>
+                <a href="#" class="current">Favorites</a>
+            </nav>
+        </header>
+        <div class="title">
+            <div id="library">
+                CSS Library
+            </div>
+        </div>
+        <section class="group">
+            <div class="year">
+                Favorites
+            </div>
+            <div class="list">
+                Fahrenheit 451, To Kill A Mockingbird, The Great Gatsby, Everything I Never Told You, The Catcher in the Rye
+            </div>
+            <div class="books">
+                <img src="images/book1.jpg" class="books1">
+                <img src="images/book5.jpg" class="books2">
+                <img src="images/book6.jpg" class="books1">
+                <img src="images/book7.jpg" class="books2">
+                <img src="images/book8.jpg" class="books1">
+            </div>
+        </section>
+
+        Link to <a href="index.html">my homepage</a>
+    </body>
+</html>
