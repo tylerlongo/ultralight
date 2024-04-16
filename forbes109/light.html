@@ -5,41 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #background {
-            max-height: 80vh;
-            opacity: 100%;
-            border-radius: 50px;
-            align-items: center;
-        }
         body {
             background-color: black;
         }
         div {
             color: white;
-            width: 98%;
-        }
-        #time {
-            font-size: 20px;
-            position: absolute;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 99vw;
+            padding-bottom: 1vw;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 3vh;
             text-align: center;
-            top: 20px;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
-        #lightswitch {
+        #background {
+            max-height: 70vh;
+            opacity: 100%;
+            border-radius: 5vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #time {
+            font-size: 2vh;
+        }
+        #textbox {
             position: fixed;
-            width: 50px;
-            top: 30px;
-            left: 320px;
-            size: 20px;
+            top: 22vh;
+            font-size: 2vh;
+            color: black;
         }
     </style>
 </head>
 <body>
     <div id="time"></div>
-    <img id="background" src="desk.jpg">
-    <a href="index.html">
-        <img id="lightswitch" src="lightswitch.jpg">
-    </a>
+    <div>welcome to forbes 109! </div> 
+    <div id="textbox"></div>
+    <img id="background" src="desk.jpg" usemap="#image-map" onload="setCoords()">
+    <map name="image-map">
+        <area href="index.html" id="light-area" shape="rect"> 
+        <area id="computer-area" shape="rect" onclick="computerText()"> 
+        <area id="headphones-area" shape="rect" onclick="headphonesText()"> 
+        <area id="cactus-area" shape="rect" onclick="cactusText()"> 
+        <area id="flamingo-area" shape="rect" onclick="flamingoText()">
+        <area id="disco-area" shape="rect" onclick="discoText()">
+        <area id="drawers-area" shape="rect" onclick="drawersText()">
+        <area id="roach-area" shape="rect" onclick="roachText()">
+    </map>
+    
+    <script>
+    function setCoords() {
+        var img = document.getElementById("background");
+        var lightArea = document.getElementById("light-area");
+        lightArea.coords = (img.width*3/4) + ",0," + img.width + "," + (img.height/6);
+        var computerArea = document.getElementById("computer-area");
+        computerArea.coords = (img.width/2) + "," + (img.height/3) + "," + (img.width*5/6) + "," + (img.height/2);
+        var headphonesArea = document.getElementById("headphones-area");
+        headphonesArea.coords = (img.width/6) + "," + (img.height/3) + "," + (img.width/3) + "," + (img.height/2);
+        var cactusArea = document.getElementById("cactus-area");
+        cactusArea.coords = (img.width*3/4) + "," + (img.height/5) + "," + (img.width) + "," + (img.height/2);
+        var flamingoArea = document.getElementById("flamingo-area");
+        flamingoArea.coords = (img.width/5) + "," + (img.height/4) + "," + (img.width/3) + "," + (img.height*2/5);
+        var discoArea = document.getElementById("disco-area");
+        discoArea.coords = (img.width/3) + "," + (img.height/3) + "," + (img.width/2) + "," + (img.height/2);
+        var drawersArea = document.getElementById("drawers-area");
+        drawersArea.coords = "0," + (img.height*2/3) + "," + (img.width*2/5) + "," + (img.height*5/6);
+        var roachArea = document.getElementById("roach-area");
+        roachArea.coords = "0," + (img.height*5/6) + "," + (img.width*2/5) + "," + (img.height);
+    }
+    function computerText() {
+        const newText = "i recently declared my major as cos... <br> hopefully it was the right choice";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    function headphonesText() {
+        const newText = "apparently i listened to 40 thousand <br> minutes of music last year";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    function cactusText() {
+        const newText = "i won this dancing cactus <br> at quad's casino night";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    function flamingoText() {
+        const newText = "i wore these flamingo glasses <br> during my first on-duty shift <br> as a quad officer";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    function discoText() {
+        const newText = "these disco balls were from a <br> 70s-themed party... not sure <br> if i was supposed to keep them";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    function drawersText() {
+        const newText = "these drawers are empty";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    function roachText() {
+        const newText = "i saw a cockroach here a few days ago... <br> that was terrifying";
+        document.getElementById("textbox").innerHTML = newText;
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>

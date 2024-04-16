@@ -2,8 +2,17 @@ function updateTimeStatus() {
     const now = new Date();
     const hour = now.getHours();
     let minute = now.getMinutes();
-    
     let time = "";
+    let status = "";
+    
+    if(hour>6 && hour<18) {
+        status = "day"
+    }
+    else {
+        status = "night"
+    }
+
+    document.body.setAttribute("data-status", status);
     
     if(minute < 10) {
         minute = "0" + minute
@@ -20,8 +29,8 @@ function updateTimeStatus() {
     else {
         time = "current time: " + (hour-12) + ":" + minute + "pm"
     }
-        document.getElementById('time').innerHTML = time
-  }
+    document.getElementById('time').innerHTML = time
+}
   
   updateTimeStatus(); // Call the function to set initial status
   

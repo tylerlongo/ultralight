@@ -21,7 +21,7 @@
             text-align: center;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
-        #background {
+        img {
             max-height: 70vh;
             opacity: 50%;
             border-radius: 5vh;
@@ -29,24 +29,32 @@
             margin-left: auto;
             margin-right: auto;
         }
-        #lightswitch {
-            position: fixed;
-            width: 2vw;
-            top: 10vh;
-            left: calc(50vw+10px);
-            size: 20px;
+        img[data-status="day"] {
+            opacity: 50%;
+        }
+        img[data-status="night"] {
+            opacity: 20%;
+        }
+        #time {
+            font-size: 2vh;
         }
     </style>
 </head>
 <body>
     <div id="time"></div>
-    <img id="background" src="desk.jpg" usemap="#image-map">
+    <div>turn on the light to explore! </div> 
+    <img id="background" src="desk.jpg" usemap="#image-map" onload="setCoords()">
     <map name="image-map">
-        <area target="" alt="" title="" href="light.html" coords="0%,0%,100%,100%" shape="rect">
+        <area href="light.html" id="light-area" shape="rect"> 
     </map>
-    <a href="light.html">
-        <img id="lightswitch" src="lightswitch.jpg">
-    </a>
+    
+    <script>
+    function setCoords() {
+    var img = document.getElementById("background");
+    var lightArea = document.getElementById("light-area");
+    lightArea.coords = img.width*3/4 + "," + 0 + "," + img.width + "," + img.height/6;
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>
