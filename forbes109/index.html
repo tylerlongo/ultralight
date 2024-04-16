@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            color: white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 99vw;
+            padding-bottom: 1vw;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 3vh;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #background {
+            max-height: 70vh;
+            opacity: 50%;
+            border-radius: 5vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #lightswitch {
+            position: fixed;
+            width: 2vw;
+            top: 10vh;
+            left: calc(50vw+10px);
+            size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <img id="background" src="desk.jpg" usemap="#image-map">
+    <map name="image-map">
+        <area target="" alt="" title="" href="light.html" coords="0%,0%,100%,100%" shape="rect">
+    </map>
+    <a href="light.html">
+        <img id="lightswitch" src="lightswitch.jpg">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
