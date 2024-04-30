@@ -12,7 +12,7 @@ function updateTimeStatus() {
         status = "night"
     }
 
-    document.body.setAttribute("data-status", status);
+    document.body.setAttribute("status", status);
     
     if(minute < 10) {
         minute = "0" + minute
