@@ -38,13 +38,16 @@
             font-size: 2vh;
             color: black;
         }
+        area {
+            cursor: help;
+        }
     </style>
 </head>
 <body>
     <div id="time"></div>
     <div>welcome to forbes 109! </div> 
     <div id="textbox"></div>
-    <img id="background" src="desk.jpg" usemap="#image-map" onload="setCoords()">
+    <img id="background" src="desk_stars.jpg" usemap="#image-map" onload="setCoords()">
     <map name="image-map">
         <area href="index.html" id="light-area" shape="rect"> 
         <area id="computer-area" shape="rect" onclick="computerText()"> 
